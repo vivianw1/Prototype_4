@@ -10,7 +10,8 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        emenmyRb= GetComponent<Rigidbody>();
+        emenmyRb= GetComponent
+        <Rigidbody>();
         player = GameObject.Find("Player");
     }
 
