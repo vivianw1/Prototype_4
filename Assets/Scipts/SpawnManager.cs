@@ -19,9 +19,9 @@ public class SpawnManager : MonoBehaviour
         
     }
 
-    void SpawnEnemyWave(int enemiesToSpawn)
+    void SpawnEnemyWave()
     {
-        for(int i = 0; i < enemiesToSpawn; i++)
+        for(int i = 0; i < 3; i++)
         {
         Instantiate(enemyPrefab, GenerateSpawnPosition(),enemyPrefab.transform.rotation);
         }
