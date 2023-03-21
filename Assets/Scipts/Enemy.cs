@@ -10,8 +10,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        emenmyRb= GetComponent
-        <Rigidbody>();
+        emenmyRb= GetComponent<Rigidbody>();
         player = GameObject.Find("Player");
     }
 
@@ -21,5 +20,10 @@ public class Enemy : MonoBehaviour
         Vector3 lookDirection = (player.transform.position - transform.position).normalized;
         
         emenmyRb.AddForce(lookDirection*speed);
+
+        if (transform.position.y< -10)
+        {
+            Destroy(gameObject);
+        }
     }
 }
